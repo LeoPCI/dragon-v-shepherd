@@ -1,0 +1,90 @@
+h1 {
+	position: absolute;
+	top: 0px; left: 480px;
+	font-style: italic;
+}
+
+#ball {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 300px;
+	left: 300px;
+}
+
+#dragon {
+	height: 80px;
+	width: 80px;
+	position: relative;
+	top: -20px; left: -20px;
+}
+
+#shell {
+	position: absolute;
+	top: 70px; left: 100px;
+	height: 500px;
+	width: 1000px;
+	border: 10px solid black;
+	background-color: black;
+	border-radius: 10px;
+}
+
+#landscape {
+	height: 500px;
+	width: 1000px;
+	border-radius: 10px;
+}
+
+/*#grass {
+	margin-top: 450px;
+	height: 50px; width: 1000;
+	background-color: #59e871;
+}
+*/
+.sheep {
+	position: absolute;
+	height: 30px; width: 30px;
+}
+
+#si1 { top: 415px; left: 60px; height: 25px; width: 25px; }
+#si2 { top: 457px; left: 200px; }
+#si3 { 
+	top: 400px; left: 700px;
+	height: 27px; width: 27px;     
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+button {
+	position: absolute;
+	top: 600px; left: 566px;
+	height: 40px; width: 80px;
+	background-color: purple;
+	text-align: center;
+	border-radius: 10px;
+	font-weight: bold;
+	color: white;
+}
+button:focus { outline: white }
+
+/*
+#counter {
+	position: absolute;
+	top: 10px; left: 1100px;
+	height: 60px; width: 100px;
+	border: 2px solid black;
+	text-align: center;
+}
+h3 {
+	position: relative;
+	top: -10px;
+}
+*/
+html {
+	height: 100%; width: 100%;
+	background-color: #ab8aec;
+}
