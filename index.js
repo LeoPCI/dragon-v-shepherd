@@ -224,6 +224,7 @@ else {
 	ball.append("<img id='dragon' src='puddle.png'>")
     clearInterval(loop);
     $('#points').html('<p>OUCH!</p>')
+    a = 'yes'
 };
 
 if (killedd) {clearInterval(loop);};
