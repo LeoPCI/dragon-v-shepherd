@@ -13,39 +13,57 @@ var right = false
 var spearball = $('#spearball')
 var okay = true
 var killedd = false
+var point1=0
+var point2=0
+var point3=0
+var point4=0
+var point5=0
+var move = false
 
 $(document).ready(function() {
 
-$('#spearball').css({top: (500), left: (500)}); //practice
-
-var restart = function() {  //restart beginning
+//var restart = function() { ---this is if want to restart without reloading   //restart beginning
 $('#spear').rotate(0)
-point1=0
-point2=0
-point3=0
-point4=0
-point5=0
 var killedd = false
 $('.sheep').attr('src', 'sheep.png'); //repair sheep
 ball.css({top: 300, left: 300})
-dragon.rotate(90);
-if (a=='yes') {
+$('#dragon').rotate(90);
+/*if (a=='yes') {
 	a='no'
 }
 else if (a=='no') {
-	a='yes'
+	/*a='yes'
 	$('#points').empty()
-};
-}; //end of restart
+};*/
+//}; //end of restart
 
-restart()
+// restart()
 
 $('button').click(function(){ //when button is clicked
-
+if (a=='yes') {
+	a='no'
+	$('button').html('RESTART')
+	ball.empty()
+	ball.append("<img id='dragon' src='dragon.gif'>")
+	$('#dragon').rotate(90);
+	dragon()
+}
+else if (a=='no') {
+	location.reload()
+/*clearInterval(loop);
 ball.empty()
-ball.append("<img id='dragon' src='dragon.gif'>")
+ball.append("<img id='dragon' src='dragon.png'>")
+$("#dragon").rotate(90);*/
+};
+//	$(this).unbind(event);
+});
+
+//restart()
+
+
+var dragon = function() {
+var loop = setInterval(function() { //interval start
 var dragon = $("#dragon")
-restart()
 
 $(window).keydown(function(x) {
 	if (x.which == 37){
@@ -93,19 +111,13 @@ $(window).keyup(function(x) {
 
 });
 
-dragon.rotate(90); //give image an angle
-
-var loop = setInterval(function() { //interval start
-if (a=='yes') {
-	$('button').html('RESTART')
-}
-if (a=='no') {
+//if (a=='no') {
 /*clearInterval(loop);
 ball.empty()
 ball.append("<img id='dragon' src='dragon.png'>")
 $("#dragon").rotate(90);*/
-location.reload();
-}
+//location.reload();
+//}
 //movement variables
 var tpos = ball.position().top;
 var lpos = ball.position().left;
@@ -222,7 +234,7 @@ else {
     $('#points').html('<p>OUCH! You tried to escape <br> your limited 2-dimentional universe.</p>')
 	ball.empty();
 	ball.append("<img id='dragon' src='puddle.png'>")
-    a = 'yes'
+    a = 'no'
     clearInterval(loop);
 };
 
@@ -244,7 +256,8 @@ if (points>4) {
 	var x = true
 	killedd = true
 };
-}, 30);
+}, 30)};
+
 //begin shephard___________________________________________
 
 var newdown2 = 0
@@ -327,4 +340,4 @@ shoot()
 
 //end shephard
 
- }) });
+ });
