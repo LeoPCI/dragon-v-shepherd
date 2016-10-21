@@ -1,4 +1,3 @@
-
 var dragon = $("#dragon")
 var ball = $('#ball')
 var spear = $('#nothing')
@@ -176,9 +175,9 @@ var isinside = (tpos<539)&&(lpos<1060)&&(tpos>81)&&(lpos>100);
 var s1t = 70+  415
 var s1l = 100+  60
 var s2t = 80+  437
-var s2l = 100+  220
+var s2l = 100+  150
 var s3t = 70+  400
-var s3l = 100+  500
+var s3l = 100+  650
 var s4t = 70+  437
 var s4l = 100+  700
 var s5t = 70+  420
@@ -220,11 +219,11 @@ if (isinside) {
 	ball.css({top: (tpos+newdown), left: (lpos+newright)});
 }
 else {
+    $('#points').html('<p>OUCH! You tried to escape <br> your limited 2-dimentional universe.</p>')
 	ball.empty();
 	ball.append("<img id='dragon' src='puddle.png'>")
-    clearInterval(loop);
-    $('#points').html('<p>OUCH!</p>')
     a = 'yes'
+    clearInterval(loop);
 };
 
 if (killedd) {clearInterval(loop);};
@@ -322,7 +321,7 @@ if (dead) {
 	$('#spoints').html('<p>CONGRATULATIONS SHEPHERD!!! <br> You fended off the dragon <br> and your sheep are safe!</p>')
 };
 
-}, 20)};
+}, 26)};
 
 shoot()
 

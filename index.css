@@ -49,9 +49,9 @@ h1 {
 }
 
 #si1 { top: 415px; left: 60px; height: 25px; width: 25px; }
-#si2 { top: 437px; left: 220px; }
+#si2 { top: 437px; left: 150px; }
 #si3 { 
-	top: 400px; left: 500px;
+	top: 400px; left: 650px;
 	height: 25px; width: 25px; 
 	-moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
